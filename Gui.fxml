@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="474.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vutbr.feec.bmds.projekt.TableViewController">
+   <top>
+      <MenuBar prefHeight="18.0" prefWidth="553.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Soubor">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openItem" text="Prehrat soubor" />
+              <MenuItem mnemonicParsing="false" text="Prehrat URI" />
+              <MenuItem mnemonicParsing="false" onAction="#closedItem" text="Zavrit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane onMouseClicked="#positionSliderMoved" prefHeight="74.0" prefWidth="551.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="balanceSlider" layoutX="393.0" layoutY="14.0" prefHeight="14.0" prefWidth="135.0" />
+            <Slider fx:id="volumeSlider" layoutX="147.0" layoutY="14.0" max="1.0" prefHeight="14.0" prefWidth="128.0" />
+            <Label layoutX="461.0" layoutY="33.0" prefHeight="17.0" prefWidth="69.0" text="Hlasitost" />
+            <Label layoutX="104.0" layoutY="42.0" prefHeight="17.0" prefWidth="123.0" text="Delka\Aktualni Cas" />
+            <Button fx:id="playButton" layoutX="237.0" layoutY="42.0" mnemonicParsing="false" onAction="#playButton" text="Play" />
+            <Button fx:id="pauseButton" layoutX="295.0" layoutY="42.0" mnemonicParsing="false" onAction="#pauseButton" text="Pause" />
+            <Button fx:id="stopButton" layoutX="362.0" layoutY="42.0" mnemonicParsing="false" onAction="#stopButton" text="Stop" />
+            <Button layoutX="7.0" layoutY="16.0" mnemonicParsing="false" onAction="#openSlozka" text="Pridat Soubor" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <TableView fx:id="tableView" prefHeight="325.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="75.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </left>
+</BorderPane>
