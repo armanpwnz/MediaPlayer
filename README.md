@@ -1,2 +1,2 @@
-# MediaPlayer
-MediaPlayer project in JavaFX for BUT
+# MediaPlayer in JavaFX
+Semestral project from Brno University of Technology 
